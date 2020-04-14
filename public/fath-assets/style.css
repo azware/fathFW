@@ -1,0 +1,717 @@
+.disablediv
+{    
+    background-color: white;
+    filter:alpha(opacity=20); /* IE */
+    opacity: 0.2; /* Safari, Opera */
+    -moz-opacity:0.20; /* FireFox */
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+    background-repeat:no-repeat;
+    background-position:center;
+    top: 0px;
+    left: 0px;
+}
+
+input.file {
+  position: relative;
+  text-align: right;
+  -moz-opacity:0 ;
+  filter:alpha(opacity: 0);
+  opacity: 0;
+  z-index: 2;
+}
+
+.none{ display:none;}
+.dropdown{color: #444444;font-size:17px;}
+#calender_section{ width:700px; margin:30px auto 0;}
+#calender_section h2{ background-color:#efefef; color:#444444; font-size:17px; text-align:center; line-height:40px;}
+#calender_section h2 a{ color:#F58220; float:none;}
+#calender_section_top{ width:100%; float:left; margin-top:20px;}
+#calender_section_top ul{padding:0; list-style-type:none;}
+#calender_section_top ul li{ float:left; display:block; width:99px; border-right:1px solid #fff;  text-align:center; font-size:14px; min-height:0; background:none; box-shadow:none; margin:0; padding:0;}
+#calender_section_bot{ width:100%; margin-top:20px; float:left; border-left:1px solid #ccc; border-bottom:1px solid #ccc;}
+#calender_section_bot ul{ margin:0; padding:0; list-style-type:none;}
+#calender_section_bot ul li{ float:left; width:99px; height:80px; text-align:center; border-top:1px solid #ccc; border-right:1px solid #ccc; min-height:0; background:none; box-shadow:none; margin:0; padding:0; position:relative;}
+#calender_section_bot ul li span{ margin-top:7px; float:left; margin-left:7px; text-align:center;}
+
+.grey{ background-color:#DDDDDD !important;}
+.light_sky{ background-color:#B9FFFF !important;}
+
+/*========== Hover Popup ===============*/
+.date_cell { cursor: pointer; cursor: hand; }
+.date_cell:hover { background: #DDDDDD !important; }
+.date_popup_wrap {
+  position: absolute;
+  width: 143px;
+  height: 115px;
+  z-index: 9999;
+  top: -115px;
+  left:-55px;
+  background: transparent url(add-new-event.png) no-repeat top left;
+  color: #666 !important;
+}
+.events_window {
+  overflow: hidden;
+  overflow-y: auto;
+  width: 133px;
+  height: 115px;
+  margin-top: 28px;
+  margin-left: 25px;
+}
+.event_wrap {
+  margin-bottom: 10px; padding-bottom: 10px;
+  border-bottom: solid 1px #E4E4E7;
+  font-size: 12px;
+  padding: 3px;
+}
+.date_window {
+  margin-top:20px;
+  margin-bottom: 2px;
+  padding: 5px;
+  font-size: 16px;
+  margin-left:9px;
+  margin-right:14px
+}
+.popup_event {
+  margin-bottom: 2px;
+  padding: 2px;
+  font-size: 16px;
+  width:100%;
+}
+.popup_event a {color: #000000 !important;}
+.packeg_box a {color: #F58220;float: right;}
+a:hover {color: #181919;text-decoration: underline;}
+
+@media only screen and (min-width:480px) and (max-width:767px) {
+#calender_section{ width:336px;}
+#calender_section_top ul li{ width:47px;}
+#calender_section_bot ul li{ width:47px;}
+}
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+#calender_section{ width:219px;}
+#calender_section_top ul li{ width:30px; font-size:11px;}
+#calender_section_bot ul li{ width:30px;}
+#calender_section_bot{ width:217px;}
+#calender_section_bot ul li{ height:50px;}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+#calender_section{ width:530px;}
+#calender_section_top ul li{ width:74px;}
+#calender_section_bot ul li{ width:74px;}
+#calender_section_bot{ width:525px;}
+#calender_section_bot ul li{ height:50px;}
+}
+
+
+.text-xs-center {
+  text-align: center !important;
+}
+
+.m-t-2 {
+  padding-top: 5px;
+}
+
+.panel-info2 {
+  border-color:#bce8f1!important
+}
+.panel-info2 .panel-heading { 
+  background:#e9f5fa;
+  border-color:#bce8f1;
+  color:#3a87ad;
+  background-size:20px 20px
+}
+.panel-info2 .panel-heading .panel-title { 
+  color:#3a87ad
+}
+.panel-info2 .panel-heading .panel-heading-text a { 
+  color:#3a87ad;text-decoration:underline
+}
+.panel-info2 .panel-heading .panel-heading-text a:hover { 
+  color:#54a0c6
+}
+.panel-info2 .panel-body-colorful .panel-body { 
+  background:#e9f5fa;
+  color:#3a87ad 
+}
+.panel-info2 .panel-body-colorful .panel-footer { 
+  background:#e9f5fa;
+  border-color:#bce8f1;
+  color:#3a87ad
+}
+
+.panel-desc {
+  color: #999;
+  float: right;
+  padding: 3px;
+  font-size: 12px;
+}
+.body-desc {
+  color: #999;
+  font-size: 13px;
+}
+
+
+.login-bg {
+  height:100%;
+  left:0;
+  overflow:hidden;
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:20
+}
+.login-bg img {
+  width:100%
+}
+.login-bg .overlay {
+  background:rgba(0,0,0,.1);
+  bottom:0;
+  left:0;
+  position:absolute;
+  right:0;
+  top:0
+}
+
+
+
+/* AZ-style ----------------------------------------------------------------------------------- */
+
+/* AZTooltip START */
+  /* Tooltip container */
+  .aztooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  }
+
+  /* Tooltip text */
+  .aztooltip .aztooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .aztooltip .aztooltip-top::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
+
+  .aztooltip .aztooltip-bottom::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+  }
+
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .aztooltip:hover .aztooltiptext {
+    visibility: visible;
+  }
+  
+  .aztooltip .aztooltip-top {
+    width: 120px;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  } 
+
+  .aztooltip .aztooltip-bottom {
+    width: 120px;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  } 
+
+  .aztooltip .aztooltip-right {
+    top: -5px;
+    left: 105%;
+  }
+
+  .aztooltip .aztooltip-left {
+    top: -5px;
+    right: 105%;
+  }
+/* AZTooltip END */
+
+
+.spasi-0,.spasi-0 hr {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.spasi-2,.spasi-2 hr {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.spasi-5,.spasi-5 hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.spasi-10,.spasi-10 hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.spasi-15,.spasi-15 hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.spasi-20,.spasi-20 hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.spasi-30,.spasi-30 hr {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.spasi-bt10,.spasi-bt10 hr {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.spasi-bt5,.spasi-bt5 hr {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+
+/** CONTENT WELCOME **/
+.content-welcome {
+    max-width: 350px;
+    margin: 20px auto 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+.content-welcome img {
+    width: 200px; 
+    height: 200px;
+}
+
+.content-welcome hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top-width: 0px;
+    border-top-style: none;
+    border-top-color: currentcolor;
+    height: 1px; 
+    border-top: 1px dashed #8c8b8b;
+}
+
+.content-welcome hr.style1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0; 
+    height: 1px; 
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.content-welcome h2.head {
+    padding-top: 15px;
+    margin: 0;
+    text-align: center;
+    color: #277973;
+    font-size: 25px;
+    font-weight: 350;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.content-welcome h2.head2 {
+    padding-top: 1px;
+    margin: 0;
+    text-align: center;
+    color: #277973;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.content-welcome h2.heading {
+    margin: 0;
+    text-align: center;
+    color: #277973;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.content-welcome h2.heading2 {
+    padding-bottom: 50px;
+    margin: 0;
+    text-align: center;
+    color: #277973;
+    font-size: 17px;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.bottom-1 {
+  margin-bottom: 1px;
+}
+
+.left-5 { margin-left: 5px; }
+.left-10 { margin-left: 10px; }
+.left-20 { margin-left: 20px; }
+
+#cover-spin {
+    position:fixed;
+    width:100%;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background-color: rgba(255,255,255,0.7);
+    z-index:9999;
+}
+
+@-webkit-keyframes spin {
+  from {-webkit-transform:rotate(0deg);}
+  to {-webkit-transform:rotate(360deg);}
+}
+
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+
+#cover-spin::after {
+    content:'';
+    display:block;
+    position:absolute;
+    left:48%;top:40%;
+    width:40px;height:40px;
+    border-style:solid;
+    border-color:black;
+    border-top-color:transparent;
+    border-width: 4px;
+    border-radius:50%;
+    -webkit-animation: spin .8s linear infinite;
+    animation: spin .8s linear infinite;
+}
+
+
+/*checkbox & radio style*/
+
+.checkboxes label, .radios label {
+    cursor: pointer;
+    line-height: 20px;
+    padding-bottom: 5px;
+    font-weight: 300;
+}
+
+.radios {
+    padding-top: 5px;
+}
+
+.label_check input,
+.label_radio input {
+    margin-right: 5px;
+}
+
+.has-js .label_check,
+.has-js .label_radio {
+    padding-left: 30px;
+}
+
+.has-js .label_radio {
+    background: url(../rsa-plugins/az-js/img/checkbox/radio-off.png) no-repeat;
+}
+
+.has-js .label_check {
+    background: url(../rsa-plugins/az-js/img/checkbox/check-off.png) no-repeat;
+}
+
+.has-js label.c_on {
+    background: url(../rsa-plugins/az-js/img/checkbox/check-on.png) no-repeat;
+}
+
+.has-js label.r_on {
+    background: url(../rsa-plugins/az-js/img/checkbox/radio-on.png) no-repeat;
+}
+
+.has-js .label_check input,
+.has-js .label_radio input {
+    position: absolute;
+    left: -9999px;
+}
+
+/* FATH Style For HR */
+  hr.yellow {
+    border: 0; 
+    height: 1px; 
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255,255,0,0.3), rgba(0, 0, 0, 0));
+  }
+
+  hr.yellow2 {
+    border: 0; 
+    height: 1px; 
+    background-image: linear-gradient(to right, rgba(255,255,0,0.1), rgba(255,255,0,0.7), rgba(255,255,0,0.1));
+  }
+
+  hr.style1 {
+    border: 0; 
+    height: 1px; 
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+
+  hr.style2 {
+    border-top: 3px double #8c8b8b;
+  }
+
+  hr.style3 {
+    border: 0; 
+    height: 1px; 
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #dddddd, rgba(0, 0, 0, 0));
+  }
+
+  hr.style4 {
+    border: 0; 
+    height: 1px; 
+    background-image: linear-gradient(to right, rgba(221, 221, 221, 0.1), rgba(221, 221, 221, 1), rgba(221, 221, 221, 0.1));
+  }
+/* FATH Style For HR */
+
+.btn-login {
+    background: #4cb64c;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 0 4px #3c913c;
+}
+
+
+.tablehr {
+  width: 100%;
+  max-width: 100%;
+}
+.tablehr > thead > tr > th,
+.tablehr > tbody > tr > th,
+.tablehr > tfoot > tr > th,
+.tablehr > thead > tr > td,
+.tablehr > tbody > tr > td,
+.tablehr > tfoot > tr > td {
+  padding: 5px;
+  line-height: 15px;
+  vertical-align: top;
+  border : 1px solid #dbeef7;
+}
+.tablehr > thead > tr > th {
+  vertical-align: bottom;
+  border: 1px solid #dbeef7;
+}
+.tablehr > caption + thead > tr:first-child > th,
+.tablehr > colgroup + thead > tr:first-child > th,
+.tablehr > thead:first-child > tr:first-child > th,
+.tablehr > caption + thead > tr:first-child > td,
+.tablehr > colgroup + thead > tr:first-child > td,
+.tablehr > thead:first-child > tr:first-child > td {
+  border-top: 0;
+}
+.tablehr > tbody + tbody {
+  border: 1px solid #dbeef7;
+}
+.tablehr .tablehr {
+  background-color: #fff;
+}
+
+/* FATH Style For Signin */
+  .signin-info-green {
+    display: table-cell;
+    padding: 30px;
+    text-align: left;
+    vertical-align: top;
+    width: 40%;
+    background: #00a65a;
+  }
+  .signin-info-green .logo {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    opacity: 1;
+  }
+  .signin-info-green .slogan {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 5px;
+  }
+/* FATH Style For Signin */
+
+/* FATH Style Modif From AdminLTE */
+  .main-header .head-text {
+    float: left;
+    background-color: transparent;
+    background-image: none;
+    padding: 11px 11px;
+    color: #b8f194;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  .sidebar-menu > li.dtmenu {
+    overflow: hidden;
+    padding: 5px 25px 5px 15px;
+    color: #646c6f;
+    background: #ecf0f5;
+    border-top: 1px solid #d2d6de;
+    border-bottom: 1px solid #d2d6de;
+  }
+  .sidebar-menu > li.dtmenu:hover {
+    padding: 5px 25px 5px 15px;
+    background: #ecf0f5;
+    color: #646c6f;
+    cursor: default;
+  }
+
+  .skin-green-light .sidebar-menu > li:hover > a,
+  .skin-green-light .sidebar-menu > li.active > a {
+    background: #b6f3d9; 
+    border-left: 3px solid #00a65a;
+  }
+  .skin-green-light .sidebar-menu > li > .treeview-menu {
+    background: #ecf0f5;
+    border: 1px solid #d2d6de;
+  }
+  .skin-green-light .sidebar-menu .treeview-menu > li.active > a,
+  .skin-green-light .sidebar-menu .treeview-menu > li > a:hover {
+    background: #b6f3d9;
+    border-left: 3px solid #00a65a;
+  }
+  
+  .btn-app2 {
+    border-radius: 3px;
+    position: relative;
+    padding: 10px 5px;
+    min-width: 80px;
+    height: 60px;
+    text-align: center;
+    color: #666;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+    font-size: 12px;
+  }
+  .btn-app2 > .fa,
+  .btn-app2 > .glyphicon,
+  .btn-app2 > .ion {
+    font-size: 20px;
+    display: block;
+  }
+  .btn-app2:hover {
+    background: #f4f4f4;
+    color: #444;
+    border-color: #aaa;
+  }
+  .btn-app2:active,
+  .btn-app2:focus {
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  }
+  .btn-app2 > .badge {
+    position: absolute;
+    top: -3px;
+    right: -10px;
+    font-size: 10px;
+    font-weight: 400;
+  }
+
+  .btn-app3 {
+    border-radius: 3px;
+    position: relative;
+    padding: 10px 5px;
+    min-width: 80px;
+    height: 60px;
+    text-align: center;
+    font-size: 12px;
+  }
+  .btn-app3 > .fa,
+  .btn-app3 > .glyphicon,
+  .btn-app3 > .ion {
+    font-size: 20px;
+    display: block;
+  }
+  .btn-app3:active,
+  .btn-app3:focus {
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  }
+  .btn-app3 > .badge {
+    position: absolute;
+    top: -3px;
+    right: -10px;
+    font-size: 10px;
+    font-weight: 400;
+  }
+
+
+  .btn-app4 {
+    border-radius: 3px;
+    position: relative;
+    padding: 4px 10px;
+    min-width: 80px;
+    height: 30px;
+    text-align: center;
+    color: #666;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+    font-size: 14px;
+  }
+  .btn-app4 > .fa,
+  .btn-app4 > .glyphicon,
+  .btn-app4 > .ion {
+    font-size: 16px;
+  }
+  .btn-app4:hover {
+    background: #f4f4f4;
+    color: #444;
+    border-color: #aaa;
+  }
+  .btn-app4:active,
+  .btn-app4:focus {
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  }
+  .btn-app4 > .badge {
+    position: absolute;
+    top: -3px;
+    right: -10px;
+    font-size: 10px;
+    font-weight: 400;
+  }
+  .main-footer {
+    padding: 7px;
+}
+/* FATH Style Modif From AdminLTE */
