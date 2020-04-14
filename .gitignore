@@ -1,3 +1,8 @@
 nbproject
 fath-vendor/*
+database/*
+</pre>
+*.sql
+*.txt
+<pre>
 !fath-vendor/.gitkeep
